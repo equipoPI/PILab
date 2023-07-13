@@ -1,0 +1,56 @@
+# Inicializa un nuevo repositorio Git en el directorio actual
+git init
+
+# Clona un repositorio Git existente desde una URL remota
+git clone <url>
+
+# Agrega un archivo específico al área de preparación (staging area)
+git add <archivo>
+
+# Crea un nuevo commit con los cambios en el área de preparación y un mensaje descriptivo
+git commit -m "<mensaje>"
+
+# Muestra el estado actual del repositorio, incluyendo los archivos modificados y los que están en el área de preparación
+git status
+
+# Envía los commits locales al repositorio remoto
+git push
+
+# Obtiene los cambios más recientes del repositorio remoto y los fusiona con la rama local actual
+git pull
+
+# Obtiene los cambios más recientes del repositorio remoto sin fusionarlos automáticamente
+git fetch
+
+# Muestra una lista de ramas en el repositorio y resalta la rama actual
+git branch
+
+# Cambia a la rama especificada
+git checkout <rama>
+
+# Fusiona los cambios de una rama específica en la rama actual
+git merge <rama>
+
+# Agrega un repositorio remoto con un nombre y una URL
+git remote add <nombre> <url>
+
+# Muestra un registro de los commits en orden cronológico
+git log
+
+# Deshace los commits posteriores al commit especificado, manteniendo los cambios en el área de preparación
+git reset <commit>
+
+# Crea un nuevo commit que deshace los cambios introducidos por el commit especificado
+git revert <commit>
+
+# Guarda temporalmente los cambios locales en una pila de "stash" para poder cambiar de rama sin comprometer los cambios
+git stash
+
+# Muestra una lista de tags (etiquetas) existentes en el repositorio
+git tag
+
+# Muestra las diferencias entre archivos o commits
+git diff
+
+# Muestra una lista de los repositorios remotos configurados, junto con sus URLs
+git remote -v

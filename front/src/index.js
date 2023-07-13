@@ -1,13 +1,56 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import CssBaseline from "@mui/material/CssBaseline";
+import createTheme from '@mui/material/styles/createTheme';
+import ThemeProvider from '@mui/material/styles/ThemeProvider';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const tema1 = createTheme({ //personalizacion de themas y colores
+  palette: {
+    type: 'light',
+    primary: {
+      main: '#052b46',
+      light: '#457398',
+    },
+    secondary: {
+      main: '#920484',
+    },
+    background: {
+      default: '#ef9611',
+      paper: '#ffbc58',
+    },
+    success: {
+      main: '#0ee215',
+    },
+    warning: {
+      main: '#ffff00',
+    },
+    error: {
+      main: '#d50000',
+    },
+  },
+});
+
+
+
+const root = ReactDOM.createRoot(document.getElementById('root'));   //personalizacion de themas y colores
 root.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={tema1}>
+      <BrowserRouter>
+        <CssBaseline />
+        <App />
+      </BrowserRouter>
+    </ThemeProvider>
   </React.StrictMode>
 );
 
