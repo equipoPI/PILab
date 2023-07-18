@@ -15,6 +15,9 @@ create urls.py dir PILab\api\
 
 pip install coreapi
 
+npm install axios //para trabajar vinculacion api con front
+npm install @mui/material @emotion/react @emotion/styled
+
 ####*URLs*
 
 "django": "http://127.0.0.1:8000/admin/",           

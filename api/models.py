@@ -118,6 +118,30 @@ class Aula(models.Model):
     def __str__(self):
         return f"Nombre: {self.nombre}, Ubicacion: {self.ubicacion}"
 
+class CalendarioAcademico(models.Model):
+    fecha = models.DateField()
+    franja_horaria = models.CharField(max_length=100)
+    tipo_evento = models.CharField(max_length=100)
+
+    def __str__(self):
+        return f"Fecha: {self.fecha}, Franja Horaria: {self.franja_horaria}, Tipo de Evento: {self.tipo_evento}"
+
+class Notificacion(models.Model):
+    destinatario = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    contenido = models.TextField()
+    fecha_envio = models.DateTimeField(default=timezone.now)
+    leida = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f"Destinatario: {self.destinatario}, Fecha de Envío: {self.fecha_envio}, Leída: {self.leida}"
+
+class Prioridad(models.Model):
+    rol = models.CharField(max_length=100)
+    nivel_prioridad = models.IntegerField()
+
+    def __str__(self):
+        return f"Rol: {self.rol}, Nivel de Prioridad: {self.nivel_prioridad}"
+
 
 class Reservas(models.Model):
     Autor = models.ForeignKey(Usuario, on_delete=models.CASCADE)

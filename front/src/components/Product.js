@@ -1,6 +1,5 @@
 //importaciones de componentes
 import Paper from "@mui/material/Paper";
-import Container from "@mui/material/Container";
 import styled from "@emotion/styled";
 import Box from "@mui/material/Box";
 import Typography from '@mui/material/Typography'; 
