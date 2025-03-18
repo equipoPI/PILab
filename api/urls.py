@@ -8,9 +8,7 @@ router.register(r'Res',views.ReservasViewSet)
 router.register(r'Her',views.HerramientasViewSet)
 router.register(r'Aul',views.AulaViewSet)
 router.register(r'Lab',views.LaboratorioViewSet)
-router.register(r'Cal',views.CalendarioAcademicoViewSet)
-router.register(r'Not',views.NotificacionViewSet)
-router.register(r'Pri',views.PrioridadViewSet)
+router.register(r'EvCal',views.EventoCalendarioViewSet)
 
 urlpatterns=[
     path('', include(router.urls))

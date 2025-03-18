@@ -1,3 +1,5 @@
+Video de comandos: https://www.youtube.com/watch?v=HiXLkL42tMU&feature=youtu.be
+
 # Inicializa un nuevo repositorio Git en el directorio actual
 git init
 

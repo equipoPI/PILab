@@ -9,12 +9,8 @@ from .serializer import AulaSerializers
 from .models import Aula
 from .serializer import LaboratorioSerializers
 from .models import Laboratorio
-from .serializer import CalendarioAcademicoSerializers
-from .models import CalendarioAcademico
-from .serializer import NotificacionSerializers
-from .models import Notificacion
-from .serializer import PrioridadSerializers
-from .models import Prioridad
+from .serializer import EventoCalendarioSerializers
+from .models import EventoCalendario
 
 class UsuarioViewSet(viewsets.ModelViewSet):
     queryset= Usuario.objects.all()
@@ -36,15 +32,7 @@ class LaboratorioViewSet(viewsets.ModelViewSet):
     queryset= Laboratorio.objects.all()
     serializer_class=LaboratorioSerializers
 
-class CalendarioAcademicoViewSet(viewsets.ModelViewSet):
-    queryset= CalendarioAcademico.objects.all()
-    serializer_class=CalendarioAcademicoSerializers
-
-class NotificacionViewSet(viewsets.ModelViewSet):
-    queryset= Notificacion.objects.all()
-    serializer_class=NotificacionSerializers
-
-class PrioridadViewSet(viewsets.ModelViewSet):
-    queryset= Prioridad.objects.all()
-    serializer_class=PrioridadSerializers
+class EventoCalendarioViewSet(viewsets.ModelViewSet):
+    queryset= EventoCalendario.objects.all()
+    serializer_class=EventoCalendarioSerializers
 # Create your views here.
